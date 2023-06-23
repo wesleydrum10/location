@@ -5,7 +5,7 @@ import { InputComponent, SearchContent, ButtonContent } from './styles'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import BigNumbers from '../BigNumbers'
 
-function HeaderComponent({result, handleSearch, handleChange}) {
+export default function HeaderComponent({result, handleSearch, handleChange}) {
   
   return (
     <HeaderContent image="/pattern-bg-desktop.png">
@@ -25,4 +25,4 @@ function HeaderComponent({result, handleSearch, handleChange}) {
   )
 }
 
-export default HeaderComponent
+

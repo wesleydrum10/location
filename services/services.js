@@ -1,0 +1,1 @@
+export {default as consult} from './consult/index'

@@ -1,8 +1,6 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { Grid } from '@mui/material'
-import { useConsult } from '../../../context/useConsult'
-import { useEffect, useState } from 'react'
 
 const blackMarker = new L.Icon({
   iconUrl:
@@ -15,25 +13,7 @@ const blackMarker = new L.Icon({
   shadowSize: [41, 41],
 })
 
-function Map({ lat, lng }) {
-  const [latitude, setLatitude] = useState()
-  const [longitude, setLongitude] = useState()
-  const { resultIp } = useConsult()
-
-  function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition)
-    } else {
-      console.log('Geolocalização não é suportada neste navegador.')
-    }
-  }
-
-  function showPosition(position) {
-    setLatitude(position.coords.latitude)
-    setLongitude(position.coords.longitude)
-  }
-
-  useEffect(() => {getLocation()}, [resultIp])
+export default function Map({ lat, lng }) {
 
   return (
     <MapContainer
@@ -52,4 +32,4 @@ function Map({ lat, lng }) {
   )
 }
 
-export default Map
+

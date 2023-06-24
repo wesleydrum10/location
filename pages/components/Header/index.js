@@ -14,7 +14,7 @@ export default function HeaderComponent({result, handleSearch, handleChange}) {
       </Typography>
       <SearchContent>
         <InputComponent placeholder="Search for any IP address or domain" onChange={(e) => handleChange(e.target.value)} />
-        <ButtonContent onClick={handleSearch}>
+        <ButtonContent onClick={handleSearch()}>
           <ArrowForwardIosIcon fontSize='small'/>
         </ButtonContent>
       </SearchContent>

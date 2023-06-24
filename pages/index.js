@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import HeadProps from './components/Head'
 import { Grid } from '@mui/material'
-import { HomeContainer } from '../pages/styles/home-style'
 import HeaderComponent from './components/Header'
 import MainComponent from './components/Main'
 import { useConsult } from '../context/useConsult'
+import { HomeContainer } from '../styles/home-style'
 
 export default function Home() {
   const { listIp, resultIp, error, loading } = useConsult()

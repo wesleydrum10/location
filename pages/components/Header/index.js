@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
-import React, { useState } from 'react'
-import { HeaderContent } from '../../styles/home-style'
-import { InputComponent, SearchContent, ButtonContent } from './styles'
+import React from 'react'
+import { HeaderContent } from '../../../styles/home-style'
+import { InputComponent, SearchContent, ButtonContent } from '../../../styles/header-styles'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import BigNumbers from '../BigNumbers'
 
@@ -14,7 +14,7 @@ export default function HeaderComponent({result, handleSearch, handleChange}) {
       </Typography>
       <SearchContent>
         <InputComponent placeholder="Search for any IP address or domain" onChange={(e) => handleChange(e.target.value)} />
-        <ButtonContent onClick={handleSearch()}>
+        <ButtonContent onClick={handleSearch}>
           <ArrowForwardIosIcon fontSize='small'/>
         </ButtonContent>
       </SearchContent>

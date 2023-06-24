@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Divider, Typography } from '@mui/material'
-import { BoxContent, PaperContainer } from './styles'
+import {BoxContent, PaperContainer} from '../../../styles/big-numbers-styles'
 
 function BigNumbers({ ip, location, timeZone, isp }) {
   const [isMobile, setIsMobile] = useState(false)

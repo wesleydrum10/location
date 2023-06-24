@@ -1,6 +1,7 @@
+import React from 'react'
 import { Box, Paper, styled } from '@mui/material'
 
-const BoxContent = styled(Box)((props) => ({
+const BoxContent = styled(Box)(() => ({
   display: 'flex',
   flexDirection: 'column',
   width: '180px',
@@ -14,7 +15,7 @@ const BoxContent = styled(Box)((props) => ({
   },
 }))
 
-const PaperContainer = styled(Paper)((props) => ({
+const PaperContainer = styled(Paper)(() => ({
   display: 'flex',
   position: 'absolute',
   zIndex: 2,

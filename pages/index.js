@@ -26,7 +26,7 @@ export default function Home() {
       <HomeContainer>
         <HeaderComponent
           result={resultIp}
-          handleSearch={() => handleList}
+          handleSearch={handleList}
           handleChange={handleChange}
         />
         <MainComponent result={resultIp} />

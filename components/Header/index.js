@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 import React from 'react'
-import { HeaderContent } from '../../../styles/home-style'
-import { InputComponent, SearchContent, ButtonContent } from '../../../styles/header-styles'
+import { HeaderContent } from '../../styles/home-style'
+import { InputComponent, SearchContent, ButtonContent } from '../../styles/header-styles'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import BigNumbers from '../BigNumbers'
 

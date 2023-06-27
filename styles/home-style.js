@@ -2,12 +2,9 @@ import { Box, styled } from '@mui/material'
 
 const HomeContainer = styled(Box)(() => ({
   display: 'grid',
-  gridTemplateRows: '40vh 60vh',
+  gridTemplateRows: '38vh 62vh',
   gridTemplateAreas: `"header"
                       "main"`,
-  '@media (max-width: 600px)': {
-    gridTemplateRows: '35vh auto',
-  }
 }))
 
 const HeaderContent = styled(Box)((props) => ({
@@ -31,7 +28,7 @@ const MainContent = styled(Box)(() => ({
   width: '100%',
   height: '100%',
   position: 'relative', 
-  zIndex: 1
+  zIndex: 1,
 }))
 
 export { HomeContainer, HeaderContent, MainContent }

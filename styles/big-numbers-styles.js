@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Paper, styled } from '@mui/material'
 
 const BoxContent = styled(Box)(() => ({
@@ -34,4 +33,11 @@ const PaperContainer = styled(Paper)(() => ({
   },
 }))
 
-export { BoxContent, PaperContainer }
+const RenderDevice = styled(Box)(() => ({
+  display: 'flex',
+  '@media (max-width: 600px)': {
+    display: 'none'
+  }
+}))
+
+export { BoxContent, PaperContainer, RenderDevice }

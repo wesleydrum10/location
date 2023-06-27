@@ -28,7 +28,6 @@ const PaperContainer = styled(Paper)(() => ({
     padding: '20px 10px',
     gap: '5px',
     marginTop: '0px',
-    margin: '0px 20px',
     top: 150,
   },
 }))

@@ -9,6 +9,7 @@ const InputComponent = styled('input')(() => ({
   outline: 'none',
   paddingLeft: '30px',
   fontSize: '1.2rem',
+  background: '#FFFFFF',
   '@media(max-width: 600px)': {
     width: '100%',
     fontSize: '1rem',

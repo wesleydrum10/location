@@ -9,6 +9,7 @@ const ConsultProvider = ({ children }) => {
   const [loading, setLoading] = useState(false)
 
   const listIp = (ip) => {
+    setError('')
     setLoading(true)
     service.consult
       .listConsultIp(ip)

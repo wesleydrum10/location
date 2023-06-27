@@ -4,9 +4,11 @@ import { HeaderContent } from '../../styles/home-style'
 import { InputComponent, SearchContent, ButtonContent } from '../../styles/header-styles'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import BigNumbers from '../BigNumbers'
+import { useConsult } from '../../context/useConsult'
 
 export default function HeaderComponent({result, handleSearch, handleChange}) {
-  
+  const {error} = useConsult()
+
   return (
     <HeaderContent image="/pattern-bg-desktop.png">
       <Typography variant="h5" color="white" fontWeight={700}>
@@ -18,7 +20,7 @@ export default function HeaderComponent({result, handleSearch, handleChange}) {
           <ArrowForwardIosIcon fontSize='small'/>
         </ButtonContent>
       </SearchContent>
-      {result && (
+      {result && !error && (
         <BigNumbers ip={result?.ip} location={result?.location} timeZone={result?.location?.timezone} isp={result?.isp} />
       )}
     </HeaderContent>

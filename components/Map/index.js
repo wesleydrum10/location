@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
+import { useConsult } from '../../context/useConsult'
 
 const blackMarker = new L.Icon({
   iconUrl:
@@ -13,6 +14,7 @@ const blackMarker = new L.Icon({
 })
 
 function Map({ lat, lng }) {
+  const {error} = useConsult()
   
   let coordinates = [-23.5489, -46.6388]
 
@@ -23,7 +25,7 @@ function Map({ lat, lng }) {
   return (
     <MapContainer
       center={coordinates}
-      zoom={13}
+      zoom={15}
       scrollWheelZoom={false}
       style={{ height: '100%', position: 'relative', zIndex: 1, width: '100%'}}
     >
@@ -31,7 +33,7 @@ function Map({ lat, lng }) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {lat && <Marker position={coordinates} icon={blackMarker} />}
+      {lat && !error && <Marker position={coordinates} icon={blackMarker} />}
     </MapContainer>
   )
 }

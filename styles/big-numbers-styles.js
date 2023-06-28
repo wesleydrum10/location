@@ -26,9 +26,9 @@ const PaperContainer = styled(Paper)(() => ({
     width: '90%',
     flexDirection: 'column',
     padding: '20px 10px',
-    gap: '5px',
+    gap: '0px',
     marginTop: '0px',
-    top: 150,
+    top: 130,
   },
 }))
 

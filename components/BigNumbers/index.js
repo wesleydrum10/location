@@ -1,5 +1,5 @@
 import React from 'react'
-import { Divider, Typography } from '@mui/material'
+import { Divider, Typography, useTheme } from '@mui/material'
 import {
   BoxContent,
   PaperContainer,
@@ -11,7 +11,7 @@ function BigNumbers({ ip, location, timeZone, isp }) {
   return (
     <PaperContainer elevation={0}>
       <BoxContent>
-        <Typography variant="overline" color="grey" fontWeight={700}>
+        <Typography variant="overline" color="primary" fontWeight={700}>
           Ip Address
         </Typography>
         <Typography variant="h6" fontWeight={700}>
@@ -22,7 +22,7 @@ function BigNumbers({ ip, location, timeZone, isp }) {
         <Divider orientation="vertical" flexItem />
       </RenderDevice>
       <BoxContent>
-        <Typography variant="overline" color="grey" fontWeight={700}>
+        <Typography variant="overline" color="primary" fontWeight={700}>
           Location
         </Typography>
         <Typography variant="h6" fontWeight={700}>
@@ -33,7 +33,7 @@ function BigNumbers({ ip, location, timeZone, isp }) {
         <Divider orientation="vertical" flexItem />
       </RenderDevice>
       <BoxContent>
-        <Typography variant="overline" color="grey" fontWeight={700}>
+        <Typography variant="overline" color="primary" fontWeight={700}>
           TimeZone
         </Typography>
         <Typography variant="h6" fontWeight={700}>
@@ -44,7 +44,7 @@ function BigNumbers({ ip, location, timeZone, isp }) {
         <Divider orientation="vertical" flexItem />
       </RenderDevice>
       <BoxContent>
-        <Typography variant="overline" color="grey" fontWeight={700}>
+        <Typography variant="overline" color="primary" fontWeight={700}>
           Isp
         </Typography>
         <Typography variant="h6" fontWeight={700}>

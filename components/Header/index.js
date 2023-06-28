@@ -1,13 +1,17 @@
-import { Typography } from '@mui/material'
+import { CircularProgress, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { HeaderContent } from '../../styles/home-style'
-import { InputComponent, SearchContent, ButtonContent } from '../../styles/header-styles'
+import {
+  InputComponent,
+  SearchContent,
+  ButtonContent,
+} from '../../styles/header-styles'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import BigNumbers from '../BigNumbers'
 import { useConsult } from '../../context/useConsult'
 
 export default function HeaderComponent({}) {
-  const {error, resultIp, listIp} = useConsult()
+  const { error, resultIp, listIp, loading } = useConsult()
 
   const [text, setText] = useState('')
 
@@ -21,16 +25,26 @@ export default function HeaderComponent({}) {
         IP Address Tracker
       </Typography>
       <SearchContent>
-        <InputComponent placeholder="Search for any IP address or domain" onChange={(e) => setText(e.target.value)}/>
+        <InputComponent
+          placeholder="Search for any IP address or domain"
+          onChange={(e) => setText(e.target.value)}
+        />
         <ButtonContent onClick={() => handleList()}>
-          <ArrowForwardIosIcon fontSize='small'/>
+          {loading ? (
+            <CircularProgress />
+          ) : (
+            <ArrowForwardIosIcon fontSize="small" />
+          )}
         </ButtonContent>
       </SearchContent>
       {resultIp && !error && (
-        <BigNumbers ip={resultIp?.ip} location={resultIp?.location} timeZone={resultIp?.location?.timezone} isp={resultIp?.isp} />
+        <BigNumbers
+          ip={resultIp?.ip}
+          location={resultIp?.location}
+          timeZone={resultIp?.location?.timezone}
+          isp={resultIp?.isp}
+        />
       )}
     </HeaderContent>
   )
 }
-
-

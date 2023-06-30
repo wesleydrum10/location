@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { CircularProgress, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HeaderContent } from '../../styles/home-style'
 import {
   InputComponent,
@@ -18,6 +19,10 @@ export default function HeaderComponent({}) {
   const handleList = () => {
     listIp(text)
   }
+
+  useEffect(() => {
+    listIp(text)
+  },[])
 
   return (
     <HeaderContent image="/pattern-bg-desktop.png">

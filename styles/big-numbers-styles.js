@@ -5,8 +5,8 @@ const BoxContent = styled(Box)(() => ({
   flexDirection: 'column',
   width: '180px',
   marginRight: '50px',
-  '@media (max-width: 600px)': {
-    width: 'auto',
+  '@media (max-width: 750px)': {
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: '0px',
@@ -22,8 +22,8 @@ const PaperContainer = styled(Paper)(() => ({
   gap: '20px',
   borderRadius: '15px',
   top: 170,
+  width: '90%',
   '@media (max-width: 600px)': {
-    width: '90%',
     flexDirection: 'column',
     padding: '20px 10px',
     gap: '0px',

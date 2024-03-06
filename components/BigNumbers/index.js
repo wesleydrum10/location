@@ -1,13 +1,12 @@
-import React from 'react'
-import { Divider, Typography, useTheme } from '@mui/material'
+import React from "react";
+import { Divider, Typography, useTheme } from "@mui/material";
 import {
   BoxContent,
   PaperContainer,
   RenderDevice,
-} from '../../styles/big-numbers-styles'
+} from "../../styles/big-numbers-styles";
 
 function BigNumbers({ ip, location, timeZone, isp }) {
-
   return (
     <PaperContainer elevation={0}>
       <BoxContent>
@@ -48,11 +47,11 @@ function BigNumbers({ ip, location, timeZone, isp }) {
           Isp
         </Typography>
         <Typography variant="h6" fontWeight={700}>
-          {isp ? isp : 'Não informado'}
+          {isp ? isp : "Não informado"}
         </Typography>
       </BoxContent>
     </PaperContainer>
-  )
+  );
 }
 
-export default BigNumbers
+export default BigNumbers;

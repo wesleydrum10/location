@@ -10,7 +10,7 @@ export default function Home() {
   const { error } = useConsult()
 
   return (
-    <Grid>
+    <Grid >
       {error && (
         <Box
           sx={{

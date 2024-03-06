@@ -11,7 +11,7 @@ const InputComponent = styled('input')(() => ({
   fontSize: '1.2rem',
   background: '#FFFFFF',
   color: '#000000',
-  '@media(max-width: 600px)': {
+  '@media(max-width: 750px)': {
     width: '100%',
     fontSize: '1rem',
     paddingLeft: '20px',
